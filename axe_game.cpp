@@ -22,17 +22,16 @@ int main()
     // makes the canvas stay the same color and avoid flickering as new frames are buffered
     ClearBackground(WHITE);
 
-    // Game logic beings
+    // Game logic begins
 
     DrawCircle(circle_x, circle_y, circle_radius, BLUE);
-    // handles the teardown of the window
 
-    if (IsKeyDown(KEY_D))
+    if (IsKeyDown(KEY_D) && circle_x < 350)
     {
       circle_x = circle_x + 10;
     }
 
-    if (IsKeyDown(KEY_A))
+    if (IsKeyDown(KEY_A) && circle_x > 0)
     {
       circle_x = circle_x - 10;
     }
